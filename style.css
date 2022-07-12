@@ -1,3 +1,5 @@
+/* Global Settings */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 * {
@@ -16,5 +18,94 @@ li {
 }
 
 :root {
-  --primary-color: #df124b;
+  --aside-background: #0a090d;
+  --pink-color: #df124b;
+  --header-background: #15171a;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+i {
+  font-size: 1.3rem;
+}
+
+/* Main */
+
+main {
+  display: flex;
+}
+
+/* Aside Styling */
+
+aside {
+  width: 10%;
+  height: 100vh;
+  background-color: var(--aside-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.4rem 0;
+}
+
+aside .logo {
+  width: 40%;
+}
+
+aside .logo img {
+  width: 100%;
+}
+
+aside .share-btn i {
+  color: var(--white-color);
+  font-size: 1.4rem;
+}
+
+aside .pages-link ul li {
+  padding: 0.7rem 0;
+  writing-mode: vertical-rl;
+}
+
+aside .pages-link ul a {
+  position: relative;
+  color: var(--white-color);
+  font-size: 0.9rem;
+  display: block;
+  text-align: center;
+}
+
+aside .pages-link ul a:hover {
+  color: var(--pink-color);
+}
+
+aside .pages-link ul a::before {
+  content: "";
+  position: absolute;
+  height: 7px;
+  top: 43%;
+  left: -8px;
+  width: 7px;
+  background-color: var(--pink-color);
+  border-radius: 50%;
+  display: none;
+  transition: 0.4s;
+}
+
+aside .pages-link ul a:hover::before {
+  display: block;
+}
+
+aside .pages-link ul .active {
+  color: var(--pink-color) !important;
+}
+
+/* header styling */
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  background-color: var(--header-background);
 }
