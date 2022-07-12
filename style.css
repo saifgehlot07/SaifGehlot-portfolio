@@ -10,6 +10,7 @@
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -99,6 +100,10 @@ aside .pages-link ul .active {
   color: var(--pink-color) !important;
 }
 
+aside .pages-link ul .active::before {
+  display: block;
+}
+
 /* header styling */
 
 header {
@@ -106,6 +111,78 @@ header {
   width: 100%;
   justify-content: space-between;
   flex-direction: column;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   background-color: var(--header-background);
+}
+
+header .social-btns {
+  display: flex;
+  align-items: center;
+}
+
+.social-btns .follow-text {
+  color: var(--white-color);
+  font-size: 1.1rem;
+}
+
+header .social-btns span {
+  margin: 0 25px;
+  height: 1px;
+  width: 4%;
+  background-color: var(--white-color);
+}
+
+header .social-btns .icons i {
+  color: var(--white-color);
+}
+
+header .contact-ways {
+  display: flex;
+  align-items: center;
+}
+
+header .contact-ways .Whatsapp {
+  margin: 0 1rem;
+}
+
+header .contact-ways .messager,
+header .contact-ways .Whatsapp,
+header .contact-ways .Email {
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+}
+
+header .contact-ways .social-icon i {
+  color: var(--pink-color);
+  padding-right: 8px;
+  font-size: 2rem;
+}
+
+header .contact-ways .social-icons {
+  color: var(--pink-color);
+}
+
+header .personal-information {
+  color: var(--white-color);
+}
+
+header .personal-information p {
+  margin: 1rem 0;
+  width: 50%;
+}
+
+header .personal-information a {
+  color: var(--white-color);
+  background-color: var(--pink-color);
+  padding: 5px 15px;
+  margin-top: 0.8rem;
+}
+
+header .personal-information a i {
+  font-size: 1rem;
+}
+
+header .personal-information h1 span {
+  color: var(--pink-color);
 }
