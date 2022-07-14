@@ -104,18 +104,38 @@ aside .pages-link ul .active::before {
   display: block;
 }
 
+aside .hamburger {
+  display: none;
+}
+
 /* header styling */
 
 header {
-  display: flex;
   width: 100%;
+  background-color: var(--header-background);
+}
+
+header .home-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .home-page .left-content {
+  display: flex;
+  height: 100%;
   justify-content: space-between;
   flex-direction: column;
   padding: 1.5rem;
   background-color: var(--header-background);
 }
 
-header .social-btns {
+header .home-page .right-image img {
+  width: 150%;
+}
+
+header .home-page .social-btns {
   display: flex;
   align-items: center;
 }
@@ -133,7 +153,15 @@ header .social-btns span {
 }
 
 header .social-btns .icons i {
+  display: inline-block;
   color: var(--white-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header .social-btns .icons i:hover {
+  color: #beb9b9;
+  transform: translateY(-3px);
 }
 
 header .contact-ways {
@@ -151,6 +179,7 @@ header .contact-ways .Email {
   display: flex;
   align-items: center;
   color: var(--white-color);
+  font-size: 0.9rem;
 }
 
 header .contact-ways .social-icon i {
@@ -186,3 +215,49 @@ header .personal-information a i {
 header .personal-information h1 span {
   color: var(--pink-color);
 }
+
+/* Media Queries */
+
+/* @media only screen and (max-width: 700px) {
+  main {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Aside Media Queries */
+
+/* aside {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside .pages-link {
+     width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside .hamburger {
+    display: block;
+    color: var(--white-color);
+  }
+
+  aside .hamburger .close {
+    display: none;
+  }
+
+  aside .logo,
+  aside .share-btn {
+    display: none;
+  }
+
+  aside .pages-link li a {
+    writing-mode: horizontal-tb;
+  }
+} */
